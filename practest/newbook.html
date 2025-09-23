@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Book-O-Rama Catalog</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Book-O-Rama Catalog Search</h1>
+
+        <form action="insert_book.php" method="post">
+            <label for="isbn">International Standard Book Number(ISBN): </label>
+            <input name="isbn" type="text" required>
+
+            <label for="author">Author: </label>
+            <input name="author" type="text" required>
+
+            <label for="title">Title: </label>
+            <input name="title" type="text" required>
+
+            <label for="price">Price: </label>
+            <input name="price" type="number" required>
+
+            <div class="form-actions">
+                <a href="search.php" class="cancel-btn">Cancel</a>
+                <button type="submit" class="add-btn">Add Book</button>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>

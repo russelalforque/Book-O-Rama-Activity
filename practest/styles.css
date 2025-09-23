@@ -1,0 +1,358 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #f4f6f9, #e8ecf3);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Container */
+.container {
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Title */
+h1 {
+    font-size: 26px;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+select,
+input[type="text"],
+input[type="number"],
+button {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+select:focus,
+input[type="text"]:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 6px rgba(74, 144, 226, 0.3);
+    outline: none;
+}
+
+/* General buttons */
+button {
+    background: #4a90e2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #357ab8;
+    transform: translateY(-2px);
+}
+
+/* Cancel + Add Book buttons in form */
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.form-actions button,
+.form-actions .cancel-btn {
+    flex: 1; /* equal width */
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Add Book button (blue) */
+.form-actions button {
+    background: #4a90e2;
+    color: #fff;
+}
+
+.form-actions button:hover {
+    background: #357ab8;
+    transform: translateY(-2px);
+}
+
+/* Cancel button (red) */
+.form-actions .cancel-btn {
+    background: #dc3545;
+    color: #fff;
+}
+
+.form-actions .cancel-btn:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Search Results */
+#searchResults {
+    max-height: 450px;
+    overflow-y: auto;
+    margin-top: 20px;
+    padding-right: 10px;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: #fff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-height: 120px;
+}
+
+.result-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+}
+
+.result-details {
+    flex: 1;
+    text-align: left;
+    color: #2c3e50;
+}
+
+.result-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.result-actions form button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Edit button (blue) */
+.result-actions .edit-btn {
+    background: #4a90e2;
+    color: white;
+}
+
+.result-actions .edit-btn:hover {
+    background: #357ab8;
+    transform: translateY(-2px);
+}
+
+/* Delete button (red) */
+.result-actions .delete-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.result-actions .delete-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Book results heading + View all */
+.results {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.results h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.results form button {
+    padding: 8px 14px;
+    background-color: #27ae60; /* green */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.results form button:hover {
+    background-color: #1e8449;
+}
+
+/* Back + Add Book container */
+.nav-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* Back arrow */
+.back-arrow {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4a90e2;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    background: #f0f4fa;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.back-arrow:hover {
+    background: #dce6f7;
+    transform: translateX(-3px);
+}
+
+/* Add Book nav button */
+a.navbutton {
+    background: #4a90e2;
+    color: white !important;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+a.navbutton:hover {
+    background: #357ab8;
+    transform: translateY(-2px);
+}
+
+/* Messages */
+.message-box {
+    position: fixed; /* center it on screen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
+    max-width: 500px;
+    padding: 30px 25px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    z-index: 9999;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Error box */
+.error-box {
+    background: #fdecea;
+    color: #c0392b;
+    border: 2px solid #f5c6cb;
+}
+
+/* Success box */
+.success-box {
+    background: #eafaf1;
+    color: #27ae60;
+    border: 2px solid #b2f0c0;
+}
+
+.message-box p {
+    margin-bottom: 20px;
+}
+
+/* Button inside message */
+.message-box a.navbutton {
+    display: inline-block;
+    font-size: 16px;
+    padding: 12px 24px;
+    background: #4a90e2;
+    color: #fff !important;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.message-box a.navbutton:hover {
+    background: #357ab8;
+    transform: translateY(-2px);
+}
+
+/* Results header with actions */
+.results {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.results-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.results-actions form,
+.results-actions a {
+    display: inline-block;
+}
+
+.results-actions button,
+.results-actions .navbutton {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.results-actions button:hover,
+.results-actions .navbutton:hover {
+    background-color: #0056b3;
+}
