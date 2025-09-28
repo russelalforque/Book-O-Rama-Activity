@@ -2,19 +2,6 @@
 
 echo '<link rel="stylesheet" href="styles.css">';
 
-function isValid($data): bool
-{
-
-    $dataSize = sizeof($data);
-
-    for ($i = 0; $i < $dataSize; $i++) {
-        if (empty($data[$i]))
-            return false;
-    }
-
-    return true;
-}
-
 function displayError($message, $href)
 {
     echo '
