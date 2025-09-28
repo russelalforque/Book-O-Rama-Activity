@@ -22,10 +22,11 @@ try {
         throw new Exception("ISBN should only contain numbers. Please remove any letters, spaces, or symbols.");
     }
 
-    // Validation: Price must be positive
-    if ($price <= 0) {
-        throw new Exception("Price should be a number greater than zero.");
+    // Validation: Price must be numeric and positive
+    if (!is_numeric($price) || $price <= 0) {
+        throw new Exception("Price should be a valid number greater than zero.");
     }
+
 
     // Sanitization
     $author = preg_replace("/[^a-zA-Z\s\.\'\-]/", "", $author);
