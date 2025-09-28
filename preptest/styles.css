@@ -1,0 +1,112 @@
+/* Reset some default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #f4f6f9, #e8ecf3);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Central container */
+.container {
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Title */
+h1 {
+    font-size: 26px;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+select, input[type="text"], button {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+select:focus, input[type="text"]:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 6px rgba(74, 144, 226, 0.3);
+    outline: none;
+}
+
+/* Button */
+button {
+    background: #4a90e2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #357ab8;
+}
+
+/* Results styling */
+.result-item {
+    text-align: left;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: #fafafa;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.result-item strong {
+    color: #2c3e50;
+}
+
+p {
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Back link */
+a {
+    display: inline-block;
+    margin-top: 25px;
+    text-decoration: none;
+    color: #4a90e2;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #357ab8;
+}
