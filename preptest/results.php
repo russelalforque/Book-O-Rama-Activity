@@ -1,6 +1,4 @@
 <?php
-require 'functions.php'; // for displayError / displaySuccess
-
 $host = "localhost";
 $user = "root";
 $pass = "";
@@ -50,8 +48,24 @@ try {
     }
 
     $result = $stmt->get_result();
+
 } catch (Exception $e) {
-    displayError($e->getMessage(), "search.html");
+    // Show error inline
+    echo "<!DOCTYPE html>
+    <html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <link rel='stylesheet' href='styles.css'>
+        <title>Error</title>
+    </head>
+    <body>
+        <div class='container'>
+            <h1>Search Error</h1>
+            <p style='color:red;'>" . htmlspecialchars($e->getMessage()) . "</p>
+            <a href='search.html'>Back to Search</a>
+        </div>
+    </body>
+    </html>";
     exit;
 }
 ?>
