@@ -1,6 +1,6 @@
 <?php
 include 'db_connect.php';
-require 'functions.php'; // for displayError / displaySuccess
+require 'functions.php';
 
 try {
     $query = "SELECT ISBN AS isbn, Author AS author, Title AS title, Price AS price FROM books";
